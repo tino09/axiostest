@@ -134,7 +134,7 @@ function errorHandling() {
     axios
     .get('https://jsonplaceholder.typicode.com/todoss', {
         validateStatus : function(status){
-            return status < 500; // 
+            return status < 500; // Reject only if status is greater than
         }
     })
     .then(res => console.log(res))
@@ -206,7 +206,7 @@ axios.interceptors.request.use(config => {
 
 // Axios Instances
 
-const axiosInstance = axios.create({
+/* const axiosInstance = axios.create({
     baseURL:'https://jsonplaceholder.typicode.com'
 });
 
@@ -229,4 +229,6 @@ axiosInstance
     }else{
         console.error(err.message);
     }
-});
+}); 
+
+*/
